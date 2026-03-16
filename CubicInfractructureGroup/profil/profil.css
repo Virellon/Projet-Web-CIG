@@ -1,0 +1,81 @@
+body {
+    background:#2b2b2b;
+    color:white;
+    font-family: 'Arial', sans-serif;
+    margin:0;
+    padding:0;
+    text-align:center;
+}
+
+.container {
+    max-width: 900px;
+    margin: 50px auto;
+    padding: 0 20px;
+}
+
+h1 {
+    color:#55ff55;
+    text-shadow:3px 3px black;
+}
+
+.profil {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    background:#3b3b3b;
+    padding:20px;
+    margin:20px 0;
+    border: 3px solid #1a1a1a;
+    box-shadow: 0 0 15px black;
+    border-radius:8px;
+}
+
+.avatar {
+    width:120px;
+    height:120px;
+    border: 3px solid #55ff55;
+    border-radius: 8px;
+    margin-right:20px;
+}
+
+.infos p {
+    margin:8px 0;
+    font-size:18px;
+}
+
+.historique {
+    background:#3b3b3b;
+    padding:20px;
+    border:3px solid #1a1a1a;
+    box-shadow:0 0 15px black;
+    border-radius:8px;
+}
+
+.historique h2 {
+    color:#55ff55;
+    text-shadow:2px 2px black;
+    margin-bottom:15px;
+}
+
+.historique ul {
+    list-style:none;
+    padding:0;
+}
+
+.historique li {
+    background:#4a4a4a;
+    margin:8px 0;
+    padding:10px;
+    border:2px solid #1a1a1a;
+    border-radius:5px;
+    text-align:left;
+    font-size:16px;
+}
+
+/* Effet pixel Minecraft sur hover */
+.historique li:hover {
+    background:#55ff55;
+    color:black;
+    cursor:default;
+}

@@ -1,0 +1,125 @@
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background: #3C8527; 
+    color: white;
+    text-shadow: 2px 2px 4px #000;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+}
+
+
+.menu {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+.btn {
+    display: inline-block;
+    padding: 12px 25px;
+    font-size: 20px;
+    background: #0f5a2a;
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: bold;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background: #16a34a;
+    transform: scale(1.05);
+}
+
+
+h1 {
+    font-size: 60px;
+    margin-top: 30px;
+    text-align: center;
+}
+
+h2 {
+    font-size: 32px;
+    margin-top: 20px;
+}
+
+
+table {
+    width: 90%;
+    max-width: 900px;
+    margin: 20px auto;
+    border-collapse: collapse;
+    text-align: center;
+    font-size: 18px;
+}
+
+table th, table td {
+    border: 1px solid white;
+    padding: 10px;
+}
+
+table th {
+    background-color: #0f5a2a;
+}
+
+table tr:nth-child(even) {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+
+form {
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    max-width: 400px;
+    margin: 20px auto;
+}
+
+form input, form select {
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 6px;
+    border: none;
+    font-size: 18px;
+}
+
+form button {
+    margin-top: 10px;
+}
+
+
+.panier-table {
+    width: 90%;
+    max-width: 900px;
+    margin: 20px auto;
+    border-collapse: collapse;
+    text-align: center;
+}
+
+.panier-table th, .panier-table td {
+    border: 1px solid white;
+    padding: 10px;
+}
+
+.panier-table th {
+    background-color: #0f5a2a;
+}
+
+.panier-table tr:nth-child(even) {
+    background-color: rgba(255,255,255,0.1);
+}
+
+@media screen and (max-width: 768px) {
+    h1 { font-size: 40px; }
+    h2 { font-size: 28px; }
+    .btn { font-size: 18px; padding: 10px 20px; }
+    table, .panier-table { font-size: 16px; }
+}

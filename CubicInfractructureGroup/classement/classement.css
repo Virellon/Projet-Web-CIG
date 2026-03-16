@@ -1,0 +1,92 @@
+body {
+    background:#014705ee;
+    color:white;
+    font-family: 'Arial', sans-serif;
+    text-align:center;
+    margin:0;
+    padding:0;
+}
+
+.container {
+    margin:50px auto;
+    max-width: 1000px;
+    padding: 0 20px;
+}
+
+h1 {
+    color:#55ff55;
+    text-shadow: 3px 3px 0 black;
+}
+
+nav {
+    margin:20px 0;
+}
+
+nav .btn {
+    text-decoration:none;
+    color:black;
+    background:#55ff55;
+    padding:10px 25px;
+    border-radius:4px;
+    font-weight:bold;
+    display:inline-block;
+    box-shadow:0 4px 0 #2c7a2c;
+}
+
+nav .btn:active {
+    transform:translateY(4px);
+    box-shadow:none;
+}
+
+
+.classement-table {
+    width: 100%;
+    max-width: 900px;
+    margin: 30px auto;
+    border-collapse: collapse;
+    font-size: 18px;
+    background:#3b3b3b;
+    box-shadow:0 0 15px black;
+    table-layout: fixed; 
+}
+
+.classement-table th,
+.classement-table td {
+    border:2px solid #1a1a1a;
+    padding:12px;
+    word-wrap: break-word;
+}
+
+.classement-table th {
+    background-color:#55ff55;
+    color:black;
+}
+
+.classement-table tr:nth-child(even) {
+    background-color:#4a4a4a;
+}
+
+
+.classement-table .first {
+    background: gold;
+    color:black;
+    font-weight:bold;
+}
+
+.classement-table .second {
+    background: silver;
+    color:black;
+    font-weight:bold;
+}
+
+.classement-table .third {
+    background:#cd7f32;
+    color:black;
+    font-weight:bold;
+}
+
+.info {
+    margin-top:20px;
+    color:#aaaaaa;
+    font-style:italic;
+}
