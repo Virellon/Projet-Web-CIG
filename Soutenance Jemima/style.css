@@ -12,7 +12,7 @@ header {
 
 
 
-.btn-ajout {
+#btn-ajout {
     background-color:rgb(46, 68, 14);  /* Une couleur verte foncée */
     color: white;
     border: 2px solid rgb(46, 68, 14);
@@ -26,14 +26,14 @@ header {
 }
 
 /* Effet quand on passe la souris dessus (Hover) */
-.btn-ajout:hover {
+#btn-ajout:hover {
     background-color: #3e5c13;
     transform: translateY(-2px); /* Le bouton "monte" un peu */
     box-shadow: 0 6px 15px rgba(0, 0, 0, 0.4); /* L'ombre s'agrandit */
 }
 
 /* Effet quand on clique (Active) */
-.btn-ajout:active {
+#btn-ajout:active {
     transform: translateY(0px); /* Le bouton redescend */
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
 }
