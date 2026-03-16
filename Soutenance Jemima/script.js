@@ -29,24 +29,23 @@ function rafraichirAffichage() {
 
     afficheurTotal.innerText = total;
 };
-rafraichirAffichage();
 // 3. Écouteurs de clics
-/*btnVip.addEventListener('click', () => {
+btnVip.addEventListener('click', () => {
     console.log("Clic sur VIP");
-    panier.push({ nom: "Grade VIP", prix: 15 });
-    rafraichirAffichage();
-});*/
+    //panier.push({ nom: "Grade VIP", prix: 15 });
+    //rafraichirAffichage();
+});
 
 btnDiamant.addEventListener('click', () => {
     console.log("Clic sur Diamant");
-    panier.push({ nom: "Kit Diamant", prix: 5 });
+   // panier.push({ nom: "Kit Diamant", prix: 5 });
     rafraichirAffichage();
 });
 
 
 
 
-const bouton1 = document.getElementById('panier');
+const bouton1 = document.getElementById('btn-ajout');
 
 bouton1.addEventListener('click', () => {
     console.log("Le bouton 1 a été cliqué !"); // Si ça s'affiche dans la console, le bouton marche
@@ -65,3 +64,8 @@ function ajouter(id, nom, prix) {
     }
 }
 
+
+
+
+document.addEventListener("DOMContentLoaded", () => {
+});
