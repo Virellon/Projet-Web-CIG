@@ -3,7 +3,7 @@ const panier = [];
 const afficheurCompteur = document.getElementById('compteur-panier');
 const afficheurTotal = document.getElementById('total-prix');
 const listeUl = document.getElementById('liste-panier');
-
+let totalprix = document.getElementById('total-prix');
 const btnVip = document.getElementById('btn-ajout');
 const btnDiamant = document.getElementById('btn-diamant');
 
@@ -21,24 +21,27 @@ function rafraichirAffichage() {
         
         // On crée un petit élément de liste pour chaque produit
         let li = document.createElement('li');
-        li.innerText = produit + " (" + produit + "€)";
-        listeUl.appendChild(li);
+        //li.innerText = produit + " (" + produit + "€)";
+        //listeUl.appendChild(li);
     });
 
-    afficheurTotal.innerText = total;
+    //afficheurTotal.innerText = total;
 };
 // 3. Écouteurs de clics
+  const choix = document.createElement("span");
 btnVip.addEventListener('click', () => {
     console.log("Clic sur VIP");
-    //panier.push({ nom: "Grade VIP", prix: 15 });
-    //rafraichirAffichage();
+    panier.push({ nom: "Grade VIP", prix: 15 });
+    rafraichirAffichage();
+    totalprix +=  15;
 });
 
-btnDiamant.addEventListener('click', () => {
-    console.log("Clic sur Diamant");
-   // panier.push({ nom: "Kit Diamant", prix: 5 });
-    rafraichirAffichage();
-});
+  totalprix.appendChild(choix);
+// btnDiamant.addEventListener('click', () => {
+//     console.log("Clic sur Diamant");
+//     panier.push({ nom: "Kit Diamant", prix: 5 });
+//     rafraichirAffichage();
+// });
 
 
 
