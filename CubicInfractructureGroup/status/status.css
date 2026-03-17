@@ -1,87 +1,37 @@
-/* ==========================
-   Styles globaux déjà utilisés
-========================== */
-body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-    background: #3C8527; /* Vert Minecraft */
+
+.status.info {
+    background-color: #423d3d;
     color: white;
-    text-shadow: 2px 2px 4px #000;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    min-height: 100vh;
 }
-
-/* Menu */
-.menu {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 15px;
-    justify-content: center;
-    margin: 20px 0;
-}
-
-/* Boutons */
-.btn {
-    display: inline-block;
-    padding: 12px 25px;
-    font-size: 20px;
-    background: #0f5a2a;
-    color: white;
-    text-decoration: none;
-    border-radius: 8px;
-    font-weight: bold;
-    transition: 0.3s;
-    cursor: pointer;
-}
-
-.btn:hover {
-    background: #16a34a;
-    transform: scale(1.05);
-}
-
-/* Titres */
-h1 {
-    font-size: 60px;
-    margin-top: 30px;
-    text-align: center;
-}
-
-/* Conteneur statut serveur */
-.status-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 15px;
-    margin-top: 30px;
-}
-
-/* Statut serveur individuel */
 .status {
-    font-size: 28px;
-    font-weight: bold;
-    padding: 15px 30px;
-    border-radius: 10px;
-    width: 300px;
-    text-align: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.215);
+    border: 2px solid #1a1a1a;
 }
+body{
+    background:#054807
 
-/* Online = vert */
+}
 .status.online {
     background-color: #16a34a;
     color: white;
 }
-
-/* Offline = rouge */
 .status.offline {
     background-color: #dc2626;
     color: white;
 }
-
-/* Responsive */
-@media screen and (max-width: 768px) {
-    h1 { font-size: 40px; }
-    .status { font-size: 22px; width: 90%; padding: 12px; }
-    .btn { font-size: 18px; padding: 10px 20px; }
+.btn {
+    display: inline-block;
+    padding: 15px 25px;
+    font-size: 20px; 
+    background: #0f5a2a;
+    color: white; 
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: bold;
+    box-shadow: 0 4px 0 #2c7a2c;
+}
+h1 {
+    font-size: 60px;
+    color: white; 
+    text-shadow: 2px 2px 4px #000;
 }
