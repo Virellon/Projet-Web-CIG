@@ -5,7 +5,7 @@ const afficheurTotal = document.getElementById('total-prix');
 const listeUl = document.getElementById('liste-panier');
 
 const btnVip = document.getElementById('btn-ajout');
-//const btnDiamant = document.getElementById('');
+const btnDiamant = document.getElementById('btn-diamant');
 
 // 2. La fonction de mise à jour de l'écran
 function rafraichirAffichage() {
@@ -30,8 +30,8 @@ function rafraichirAffichage() {
 // 3. Écouteurs de clics
 btnVip.addEventListener('click', () => {
     console.log("Clic sur VIP");
-    panier.push({ nom: "Grade VIP", prix: 15 });
-    rafraichirAffichage();
+    //panier.push({ nom: "Grade VIP", prix: 15 });
+    //rafraichirAffichage();
 });
 
 btnDiamant.addEventListener('click', () => {
@@ -106,8 +106,6 @@ try {
     voyant.classList.remove('online');
 }
 }
-
-
 rafraichirStatut();
 
 // 8. On demande de recommencer toutes les 30 secondes (30000 millisecondes)
