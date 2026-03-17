@@ -37,3 +37,44 @@ header {
     transform: translateY(0px); /* Le bouton redescend */
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
 }
+
+
+
+.staut-container{
+    display : flex;
+    align-items : center;
+    gap:10px;
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+}
+
+
+.dot{
+    height: 12px;
+    width: 12px;
+    background-color: #bbb; /* J'ai mis une couleur grise au moment ou le joueur ne sera pas en ligne */
+    border-radius: 50%;
+    display : inline-block;
+    transition :all 0,3s;
+}
+
+
+/* Quand le serveur est en ligne, on change la couleur et on ajoute l'ombre */
+.online {
+    background-color: #2ecc71; /* Un beau vert flashy */
+    box-shadow: 0 0 8px #2ecc71; /* Petite lueur fixe */
+    animation: pulse-green 2s infinite; /* Active le clignotement doux */
+}
+
+/* L'animation qui fait "battre" la lumière autour du point */
+@keyframes pulse-green {
+0% {
+    box-shadow: 0 0 0 0 rgba(46, 204, 113, 0.7);
+}
+70% {
+    box-shadow: 0 0 0 10px rgba(46, 204, 113, 0);
+}
+100% {
+    box-shadow: 0 0 0 0 rgba(46, 204, 113, 0);
+}
+}

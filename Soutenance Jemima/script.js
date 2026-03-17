@@ -1,5 +1,3 @@
-
-
 // 1. Déclarations
 const panier = [];
 const afficheurCompteur = document.getElementById('compteur-panier');
@@ -66,6 +64,52 @@ function ajouter(id, nom, prix) {
 
 
 
-
 document.addEventListener("DOMContentLoaded", () => {
 });
+
+
+
+
+
+async function rafraichirStatut() {
+
+    const voyant = document.getElementById('couleur');
+    const texteCompteur = document.getElementById('player-count');
+
+try {
+    // 2. On appelle l'API (Remplace l'URL par la tienne)
+    // Ici, j'utilise une API de test qui renvoie des données bidon
+    const reponse = await fetch('https://api.ton-serveur.com/status');
+    
+    // 3. On transforme la réponse en JSON (le format de données du web)
+    const donnees = await reponse.json();
+
+    // 4. On récupère le nombre de joueurs dans les données
+    // (Attention : le nom 'onlineCount' dépend de ton API !)
+    const nbJoueurs = donnees.onlineCount;
+
+    // 5. Mise à jour de l'affichage
+    texteCompteur.innerText = nbJoueurs; // On remplace "Chargement..." par le chiffre
+
+    if (nbJoueurs > 0) {
+    //Si des joueurs sont là, on allume le voyant
+        voyant.classList.add('online');
+    } else {
+    //Si 0 joueur, on l'éteint (couleur grise par défaut)
+        voyant.classList.remove('online');
+    }
+
+} catch (erreur) {
+    // 6. Si l'API ne répond pas ou s'il y a une erreur
+    console.error("Impossible de joindre l'API :", erreur);
+    texteCompteur.innerText = "?";
+    voyant.classList.remove('online');
+}
+}
+
+
+rafraichirStatut();
+
+// 8. On demande de recommencer toutes les 30 secondes (30000 millisecondes)
+// Comme ça, le nombre se met à jour tout seul !
+setInterval(rafraichirStatut, 30000);
