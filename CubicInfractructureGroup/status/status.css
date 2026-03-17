@@ -7,7 +7,7 @@ body {
 }
 
 .container.admin-panel {
-    width: 100%;
+    width: 95%;
     max-width: none;
     margin: 30px auto;
     background:#2b2b2b;
