@@ -2,13 +2,14 @@
 
 $host = "localhost";
 $dbname = "cubic_portal";
-$pseudo = "";
+$port = "3306";
+$pseudo = "root";
 $password = "";
 
 try {
 
     $pdo = new PDO(
-        "mysql:host=$host;dbname=$dbname;charset=utf8",
+        "mysql:host=$host;port=$port;dbname=$dbname;charset=utf8",
         $pseudo,
         $password
     );
