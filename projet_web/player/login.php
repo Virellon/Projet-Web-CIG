@@ -1,25 +1,35 @@
 <?php
 
-if (isset($_post['pseudo'])) {
-    $nouveauMembre = $_post['pseudo'];
-    echo "Nouveau profil enregistré : $nouveauMembre <br>";
+
+
+session_start();
+
+require "../databases/databases.php";
+require "../index.html";
+
+if(isset($_POST["submit"])){
+
+$email = $_POST["email"];
+$password = $_POST["password"];
+
+$stmt = $pdo->prepare("SELECT * FROM users WHERE email = ? AND password = ?");
+$stmt->execute([$email, $password]);
+
+
+$user = $stmt->fetch(PDO::FETCH_ASSOC);
+
+if($user && password_verify($password, $user["password"])){
+
+$_SESSION["user_id"] = $user["id"];
+$_SESSION["username"] = $user["username"];
+$_SESSION["role"] = $user["role"];
+
+header("Location: profile.php");
+exit;
+
+} else {
+
+echo "Identifiants incorrects.";
+
 }
 
-?>
-
-
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>  </title>
-</head>
-<body>
-
-    <form method = "POST" action  ="inscription.php">
-        Inscription <br><br>
-    <input type="text" name="pseudo" placeholder="Votre pseudo">
-    <button type="submit">Ajouter un joueur</button>
-
-</body>
-</html>

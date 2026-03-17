@@ -1,12 +1,27 @@
-
-    private $id;
-    private $name;
-    private $price;
-    private $description;
 <?php
 
-$products  = [
-    new Product(1, "Product 1", 19.99, "Description for Product 1"),
-    new Product(2, "Product 2", 29.99, "Description for Product 2"),
-    new Product(3, "Product 3", 39.99, "Description for Product 3")
-];
+session_start();
+require "../databases/databases.php";
+require "../index.html";
+
+$stmt = $pdo->query("SELECT * FROM products");
+$products = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+
+if (!isset($_SESSION["cart"])) {
+    $_SESSION["cart"] = [];
+}
+
+$product_id = $_POST["product_id"] ;
+$quantity = $_POST["quantity"] ;
+
+if (isset($_SESSION["cart"][$product_id])) {
+    $_SESSION["cart"][$product_id] += $quantity;
+} else {
+    $_SESSION["cart"][$product_id] = $quantity;
+}
+
+
+header("location: cart.php");
+exit;
+?>
