@@ -1,18 +1,96 @@
-
-form input, form button {
-    width: 70%;
-    margin: 8px 0;
-    padding: 10px;
+/* Reset et base */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
 }
 
-button {
-    background-color: #fcfcfc;
+body {
+    background-color: #0e4c11;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    text-align: center;
 }
-button:hover {
+
+/* Header et navigation */
+header {
+    padding: 20px;
+}
+
+nav {
+    margin-top: 10px;
+}
+
+nav .btn {
+    display: inline-block;
+    padding: 12px 20px;
+    margin: 0 5px;
+    background-color: #fff;
+    color: #051b06;
+    text-decoration: none;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+    transition: 0.3s;
+    font-weight: bold;
+}
+
+nav .btn:hover {
     background-color: #66BB6A;
+    color: #fff;
+    box-shadow: 0 6px 12px rgba(0,0,0,0.4);
 }
 
-body{
-    background: #388E3C;
-
+/* Container du formulaire */
+.container {
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 30px 50px;
+    margin-top: 30px;
+    border-radius: 12px;
+    width: 90%;
+    max-width: 400px;
+    box-shadow: 0 12px 24px rgba(0,0,0,0.4);
 }
+
+
+.container input {
+    padding: 15px;
+    margin: 15px 0;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    box-shadow: inset 0 2px 4px rgba(0,0,0,0.2);
+}
+
+.container input:focus {
+    outline: none;
+    box-shadow: 0 0 10px #66BB6A;
+}
+
+
+.container button {
+    padding: 12px;
+    margin-top: 15px;
+    border: none;
+    border-radius: 8px;
+    background-color: #fff;
+    color: #388E3C;
+    font-size: 16px;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+    transition: 0.3s;
+}
+
+.container button:hover {
+    background-color: #66BB6A;
+    color: #fff;
+    box-shadow: 0 6px 12px rgba(0,0,0,0.4);
+}
+
+    .container input,
+    .container button {
+        font-size: 14px;
+    }
