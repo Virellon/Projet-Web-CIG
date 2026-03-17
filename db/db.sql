@@ -65,13 +65,9 @@ JOIN user ON purchase.user_id = user_id
 JOIN boutique_item ON purchase.item_id = boutique_item.id;
 
 
-SELECT 
-u.id,
-u.username,
-u.email,
-b.nom,
-b.prix,
-p.id
-FROM boutique_item b
-full JOIN purchase p ON b.id = p.id
-full JOIN users u ON p.user_id = u.id;
+SELECT a.*, b.*, c.*
+FROM users AS a
+INNER JOIN boutique_item AS b ON a.common_column = b.common_column
+LEFT JOIN purchase AS c ON a.common_column = c.common_column
+
+
