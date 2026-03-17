@@ -1,36 +1,106 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Profil Minecraft</title>
-<link rel="stylesheet" href="profil.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profil Joueur</title>
+    <link rel="stylesheet" href="profil.css">
 </head>
+
 <body>
 
-<div class="container">
-
-<h1>Profil du joueur</h1>
-
-<div class="profil">
     
-    <div class="infos">
-        <p><strong>Pseudo :</strong> Sami</p>
-        <p><strong>Email :</strong> gojo.satoru@email.com</p>
-        <p><strong>Description :</strong> Joueur pro  </p>
+<header class="header">
+    <nav class="nav">
+    <a href="../index.html" class="btn"> Accueil</a>
+    </nav>
+</header>
+
+<main>
+
+
+    <section class="banner">
+    <h1 class="title"> Profil du Joueur</h1>
+    <p class="subtitle">Bienvenue dans ton univers</p>
+    </section>
+
+
+    <section class="profile">
+
+    <div class="profile-container">
+
+
+    <aside class="profile-sidebar">
+
+    <img src="" alt="Avatar joueur" class="avatar">
+
+    <h2 class="username">PseudoDuJoueur</h2>
+    <p class="bio"> En ligne Joueur depuis 2018</p>
+
+            
+<div class="quick-stats">
+    <div>
+    <h3>120h</h3>
+<p>Temps de jeu</p>
+</div>
+<div>
+<h3>54</h3>
+<p>Parties</p>
+</div>
+        <div>
+                <h3>12</h3>
+            <p>Victoires</p>
+        </div>
     </div>
+
+    <button class="btn-edit">⚙ Modifier le profil</button>
+
+</aside>
+
+                
+        <section class="profile-content">
+
+    
+        <nav class="tabs">
+        <button class="tab active">📜 Historique</button>
+        <button class="tab">⚠ Sanctions</button>
+        <button class="tab">📊 Statistiques</button>
+        </nav>
+
+    <div class="tab-content">
+
+        <div class="tab-panel active">
+            <h3>Dernières activités</h3>
+                <ul>
+            <li> Aucun achat pour le moment</li>
+        <li> Partie jouée il y a 2 jours</li>
+    </ul>
 </div>
 
-<div class="historique">
-<h2>Historique</h2>
-<ul>
-    <li>Achat Grade VIP</li>
-    <li>Achat Coins</li>
-    <li>Connexion serveur</li>
-</ul>
+<div class="tab-panel">
+            <h3>Sanctions</h3>
+            <p> Aucune sanction</p>
 </div>
 
+<div class="tab-panel">
+<h3>Statistiques détaillées</h3>
+    <ul>
+        <li> Temps de jeu : 120h</li>
+    <li> Victoires : 12</li>
+<li> Ratio : 65%</li>
+                    </ul>
 </div>
+
+            </div>
+
+        </section>
+
+    </div>
+
+</section>
+
+</main>
 
 </body>
 </html>
