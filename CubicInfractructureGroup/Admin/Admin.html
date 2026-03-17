@@ -1,21 +1,93 @@
+
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Admin Panel</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
 </head>
 <body>
-    <h1>Admin Panel</h1>
-
     <nav>
-        <a href="index.html" class="btn">Accueil</a>
+    <nav>
+    <a href="../index.html" class="btn">Accueil</a>
     </nav>
-
-    <div class="container">
-        <p>Zone admin </p>
-    </div>
-
+    <link rel="stylesheet" href="Admin.css">
+</nav>
 </body>
 </html>
+
+
+<div class="container admin-panel">
+
+    <h2>Gestion des Joueurs</h2>
+    <table class="admin-table">
+        <tr>
+        <th>Pseudo</th>
+        <th>Grade</th>
+        <th>Coins</th>
+        <th>Actions</th>
+    </tr>
+        <tr>
+        <td>Porygon</td>
+        <td>VIP</td>
+        <td>500</td>
+        <td>
+            <button>Bannir</button>
+            <button>Modifier</button>
+        </td>
+    </tr>
+    <tr>
+        <td>Sami</td>
+        <td>Normal</td>
+        <td>120</td>
+        <td>
+            <button>Bannir</button>
+            <button>Modifier</button>
+        </td>
+    </tr>
+</table>
+
+<h2>Gestion Serveur</h2>
+<div class="server-control">
+    <button>Redémarrer Minecraft</button>
+    <button>Changer Mode Survie / Créatif</button>
+    <p>Status: <span class="online"> Online</span></p>
+    <p>Joueurs en ligne: 24 / 100</p>
+</div>
+
+<h2>Gestion Boutique</h2>
+<table class="admin-table">
+    <tr>
+        <th>Produit</th>
+        <th>Prix</th>
+        <th>Stock</th>
+        <th>Actions</th>
+    </tr>
+    <tr>
+        <td>VIP</td>
+        <td>10€</td>
+        <td>∞</td>
+        <td>
+            <button>Modifier</button>
+            <button>Supprimer</button>
+        </td>
+    </tr>
+    <tr>
+        <td>1000 Coins</td>
+        <td>5€</td>
+        <td>∞</td>
+        <td>
+            <button>Modifier</button>
+            <button>Supprimer</button>
+        </td>
+    </tr>
+</table>
+
+<h2>Logs / Historique</h2>
+<ul class="admin-logs">
+    <li>Alex a acheté le VIP !</li>
+    <li>Sami s'est connecté</li>
+    <li>Admin a modifié le grade de Emma</li>
+    </ul>
+
+</div>

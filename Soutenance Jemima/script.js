@@ -5,7 +5,7 @@ const afficheurTotal = document.getElementById('total-prix');
 const listeUl = document.getElementById('liste-panier');
 
 const btnVip = document.getElementById('btn-ajout');
-const btnDiamant = document.getElementById('btn-diamant');
+//const btnDiamant = document.getElementById('');
 
 // 2. La fonction de mise à jour de l'écran
 function rafraichirAffichage() {
@@ -30,8 +30,8 @@ function rafraichirAffichage() {
 // 3. Écouteurs de clics
 btnVip.addEventListener('click', () => {
     console.log("Clic sur VIP");
-    //panier.push({ nom: "Grade VIP", prix: 15 });
-    //rafraichirAffichage();
+    panier.push({ nom: "Grade VIP", prix: 15 });
+    rafraichirAffichage();
 });
 
 btnDiamant.addEventListener('click', () => {
