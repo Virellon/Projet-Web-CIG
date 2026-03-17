@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+    <h1>Cubic Infrastructure</h1>
+    <div id="panier-info">
+        🛒 Panier : <span id="compteur-panier">0</span> articles
+    </div>
+</header>  
+<section class="boutique">
+    <div class="produit-carte">
+        <h3>Grade VIP</h3>
+        <p>Prix : 15€</p>
+        <button id="btn-ajout" class="panier" data-nom="Grade VIP" data-prix="15">
+            Ajouter au panier
+        </button>
+    </div>
+
+    <div class="produit-carte">
+        <h3>Kit Diamant</h3>
+        <p>Prix : 5€</p>
+        <button id="btn-ajout" data-id="2" data-nom="Kit Diamant" data-prix="5">
+            Ajouter au panier
+        </button>
+    </div>
+</section>
+<section id="affichage-panier">
+    <h2>Votre sélection :</h2>
+    <ul id="liste-panier">
+        </ul>
+    <p>Total : <span id="total-prix">0</span>€</p>
+</section>
+<script src="script.js"></script>
+</body>
+</html>

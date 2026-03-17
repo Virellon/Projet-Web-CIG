@@ -1,0 +1,39 @@
+header {
+    position: sticky; /* Si un client  scrolle Le header "colle" au haut de l'écran  */
+    top: 0;
+    background-color: rgb(46, 68, 14); /* J'ai rajouté une couleur verte foncée*/
+    color: white;
+    display: flex;
+    justify-content: space-between; /* Titre à gauche, Panier à droite */
+    padding: 1rem;
+    z-index: 1000;
+}
+
+
+
+
+#btn-ajout {
+    background-color:rgb(46, 68, 14);  /* Une couleur verte foncée */
+    color: white;
+    border: 2px solid rgb(46, 68, 14);
+    border-radius: 20px;
+    padding: 10px 20px;
+    cursor: pointer; /* Pour que la souris devienne une main */
+    transition: all 0.3s ease; /* Pour que les changements soient fluides */
+    
+    /* L'ombre : décalage-x, décalage-y, flou, couleur */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); 
+}
+
+/* Effet quand on passe la souris dessus (Hover) */
+#btn-ajout:hover {
+    background-color: #3e5c13;
+    transform: translateY(-2px); /* Le bouton "monte" un peu */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.4); /* L'ombre s'agrandit */
+}
+
+/* Effet quand on clique (Active) */
+#btn-ajout:active {
+    transform: translateY(0px); /* Le bouton redescend */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
