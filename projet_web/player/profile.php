@@ -8,4 +8,7 @@ header("Location: login.php");
 exit;
 
 }
+
+require "../databases/databases.php";
+require "../index.html";
 ?>
