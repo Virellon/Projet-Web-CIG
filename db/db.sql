@@ -50,13 +50,28 @@ INSERT INTO player (username ,gamertag, email) VALUES
 ('ibou','GamerGirl', 'gamergirl@example.com'),
 ('dia','NoobMaster', 'noobmaster@example.com');
 
+INSERT INTO purchase (user_id,item_id) VALUES
+(1,1),
+(2,1),
+(1,2);
+
+
+
 select * from player ;
 
+SELECT user_id, boutique_item.nom
+FROM purchase
+JOIN user ON purchase.user_id = user_id
+JOIN boutique_item ON purchase.item_id = boutique_item.id;
 
 
-
-
-
-
-
-
+SELECT 
+u.id,
+u.username,
+u.email,
+b.nom,
+b.prix,
+p.id
+FROM boutique_item b
+full JOIN purchase p ON b.id = p.id
+full JOIN users u ON p.user_id = u.id;
