@@ -1,9 +1,4 @@
-body{
-font-family:Arial;
-background:#018803;
-color:white;
-text-align:center;
-}
+
 
 form{
 background:#101825;
@@ -12,6 +7,18 @@ margin:auto;
 padding:60px;
 border-radius:10px;
 }
+
+.btn {
+    font-size: 20px;
+    padding: 12px 25px;
+    background: #22c55e;
+    color: white;
+    text-decoration: none;
+    border-radius: 10px;
+    display: inline-block;
+    transition: 0.3s;
+}
+
 
 input{
 width:100%;
@@ -24,4 +31,12 @@ background:#38bdf8;
 border:none;
 padding:10px;
 cursor:pointer;
+}
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #047a2b, #1e293b);
+    color: white;
+    text-align: center;
+    
 }

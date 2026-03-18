@@ -1,81 +1,129 @@
 body {
-    background:#2b2b2b;
-    color:white;
-    font-family: 'Arial', sans-serif;
-    margin:0;
-    padding:0;
-    text-align:center;
+    margin: 1;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #047a2b, #1e293b);
+    color: white;
+    text-align: center;
+    
 }
 
-.container {
-    max-width: 900px;
-    margin: 50px auto;
-    padding: 0 20px;
+.header {
+    padding: 2px;
+    text-align: center;
 }
 
-h1 {
-    color:#55ff55;
-    text-shadow:3px 3px black;
+
+.btn {
+    font-size: 20px;
+    padding: 12px 25px;
+    background: #22c55e;
+    color: white;
+    text-decoration: none;
+    border-radius: 10px;
+    display: inline-block;
+    transition: 0.3s;
 }
 
-.profil {
+.banner {
+    text-align: center;
+    padding: 40px;
+}
+
+.title {
+    font-size: 48px;
+    margin-bottom: 10px;
+}
+
+.subtitle {
+    font-size: 20px;
+    color: #94a3b8;
+}
+
+
+.profile-container {
     display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
-    background:#3b3b3b;
-    padding:20px;
-    margin:20px 0;
-    border: 3px solid #1a1a1a;
-    box-shadow: 0 0 15px black;
-    border-radius:8px;
+    gap: 30px;
+    padding: 40px;
+}
+
+
+.profile-sidebar {
+    width: 300px;
+    background: #1e293b;
+    padding: 20px;
+    border-radius: 15px;
+    text-align: center;
 }
 
 .avatar {
-    width:120px;
-    height:120px;
-    border: 3px solid #55ff55;
+    width: 120px;
+    border-radius: 50%;
+    margin-bottom: 15px;
+}
+
+.username {
+    font-size: 26px; 
+}
+
+.bio {
+    font-size: 16px;
+    color: #94a3b8;
+}
+
+.quick-stats {
+    display: flex;
+    justify-content: space-around;
+    margin: px 0;
+}
+
+.quick-stats h3 {
+    font-size: 22px;
+}
+
+.quick-stats p {
+    font-size: 14px;
+}
+
+
+.btn-edit {
+    font-size: 16px;
+    padding: 10px;
+    background: #3b82f6;
+    border: none;
     border-radius: 8px;
-    margin-right:20px;
+    color: white;
+    cursor: pointer;
 }
 
-.infos p {
-    margin:8px 0;
-    font-size:18px;
+
+.profile-content {
+    flex: 1;
+    background: #1e293b;
+    padding: 25px;
+    border-radius: 15px;
 }
 
-.historique {
-    background:#3b3b3b;
-    padding:20px;
-    border:3px solid #1a1a1a;
-    box-shadow:0 0 15px black;
-    border-radius:8px;
+
+.tabs {
+    margin-bottom: 20px;
 }
 
-.historique h2 {
-    color:#55ff55;
-    text-shadow:2px 2px black;
-    margin-bottom:15px;
+.tab {
+    font-size: 18px;
+    padding: 10px 20px;
+    margin-right: 10px;
+    border: none;
+    border-radius: 8px;
+    background: #334155;
+    color: white;
+    cursor: pointer;
 }
 
-.historique ul {
-    list-style:none;
-    padding:0;
+.tab.active {
+    background: #22c55e;
 }
 
-.historique li {
-    background:#4a4a4a;
-    margin:8px 0;
-    padding:10px;
-    border:2px solid #1a1a1a;
-    border-radius:5px;
-    text-align:left;
-    font-size:16px;
-}
-
-/* Effet pixel Minecraft sur hover */
-.historique li:hover {
-    background:#55ff55;
-    color:black;
-    cursor:default;
+.tab-panel {
+    font-size: 18px;
+    line-height: 1.6;
 }
