@@ -73,7 +73,7 @@ body {
 .quick-stats {
     display: flex;
     justify-content: space-around;
-    margin: 200px 0;
+    margin: px 0;
 }
 
 .quick-stats h3 {
