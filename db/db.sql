@@ -75,3 +75,17 @@ p.id
 FROM boutique_item b
 full JOIN purchase p ON b.id = p.id
 full JOIN users u ON p.user_id = u.id;
+
+
+
+
+SELECT 
+u.id AS user_id,
+u.username,
+u.email,
+b.nom AS item_name,
+b.prix,
+p.id AS purchase_id
+FROM purchase p
+full JOIN player u ON p.user_id = u.id
+full JOIN boutique_item b ON p.item_id = b.id;
