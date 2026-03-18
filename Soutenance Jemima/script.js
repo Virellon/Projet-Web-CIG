@@ -111,3 +111,49 @@ rafraichirStatut();
 // 8. On demande de recommencer toutes les 30 secondes (30000 millisecondes)
 // Comme ça, le nombre se met à jour tout seul !
 setInterval(rafraichirStatut, 30000);
+
+
+
+
+
+const players = [
+    { name: "maya", score: 1500 },
+    { name: "Alex", score: 1200 },
+    { name: "Herobrine", score: 999 },
+    { name: "Batman", score: 850 },
+    { name: "Luffy", score: 700 },
+    { name: "Creeper", score: 700 },
+    { name: "Porygon", score: 850 },
+    { name: "Bulbizzare", score: 700 },
+    { name: "Yuji", score: 700 }
+];
+
+function updateLeaderboard() {
+    const table = document.getElementById('leaderboard-body');
+    
+    // 1. Trier les joueurs par score (du plus haut au plus bas)
+    players.sort((a, b) => b.score - a.score);
+
+    // 2. Créer l'en-tête
+    let html = `
+        <tr>
+            <th>Rang</th>
+            <th>Joueur</th>
+            <th>Score</th>
+        </tr>`;
+
+    // 3. Générer les lignes
+    players.forEach((player, index) => {
+        html += `
+            <tr>
+                <td>#${index + 1}</td>
+                <td>${player.name}</td>
+                <td>${player.score}</td>
+            </tr>`;
+    });
+
+    table.innerHTML = html;
+}
+
+// Lancer la fonction au chargement
+window.onload = updateLeaderboard;
