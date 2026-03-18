@@ -6,7 +6,7 @@
 }
 
 body {
-    background-color: #0e4c11;
+    background: linear-gradient(135deg, #047a2b, #1e293b);
     color: #fff;
     display: flex;
     flex-direction: column;
@@ -14,7 +14,6 @@ body {
     min-height: 100vh;
     text-align: center;
 }
-
 
 header {
     padding: 20px;
