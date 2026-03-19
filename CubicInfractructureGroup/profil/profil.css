@@ -22,6 +22,19 @@ body {
     border-radius: 10px;
     display: inline-block;
     transition: 0.3s;
+    cursor: pointer; 
+}
+
+
+.btn:hover {
+    background: #16a34a; 
+    transform: scale(1.05);
+}
+
+
+.btn:active {
+    background: #15803d;
+    transform: scale(0.95);
 }
 
 .banner {
