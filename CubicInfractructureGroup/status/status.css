@@ -27,7 +27,6 @@ header nav {
     transform: translateY(4px);
     box-shadow: inset 0 2px #1f5f1f;
 }
-
 .container {
     margin-top: 50px;
 }
@@ -78,13 +77,3 @@ h2 {
     margin-bottom: 10px;
 }
 
-
-.server-card h3 {
-    font-size: 1rem;
-    text-shadow: 1px 1px black;
-}
-
-.server-card p {
-    font-size: 0.7rem;
-    margin: 5px 0;
-}
