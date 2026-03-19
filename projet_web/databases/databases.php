@@ -1,23 +1,27 @@
 <?php
 
 $host = "localhost";
-$dbname = "cubic_portal";
-$port = "3306";
-$pseudo = "root";
+$dbname = "postgres";
+$port = "5432";
+$pseudo = "postgres";
 $password = "";
 
 try {
 
-    $pdo = new PDO(
-        "mysql:host=$host;port=$port;dbname=$dbname;charset=utf8",
+  $pdo = new PDO(
+        "pgsql:host=$host;port=$port;dbname=$dbname",
         $pseudo,
         $password
     );
 
     $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+    echo "Connecté";
 
 } catch(PDOException $e) {
 
     echo "Erreur connexion : " . $e->getMessage();
 
 }
+
+
+?>
