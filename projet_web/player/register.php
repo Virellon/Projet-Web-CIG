@@ -8,9 +8,10 @@ $manager = new userManager($pdo);
 
 if(isset($_POST["submit"])){
 
-    $pseudo = $_POST["pseudo"];
-    $email = $_POST["email"];
+    $pseudo = htmlspecialchars($_POST["pseudo"]);
+    $email = htmlspecialchars($_POST["email"]);
     $password = password_hash($_POST["password"], PASSWORD_DEFAULT);
+    //$confirmPass = htmlspecialchars($_POST["confirmPass"])
     $role = "player";
     $pseudo = new User(null, $pseudo, $email, $password, $role);
 

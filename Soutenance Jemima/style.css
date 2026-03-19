@@ -12,7 +12,7 @@ header {
 
 
 
-#btn-ajout {
+.btn-ajout {
     background-color:rgb(46, 68, 14);  /* Une couleur verte foncée */
     color: white;
     border: 2px solid rgb(46, 68, 14);
@@ -26,14 +26,14 @@ header {
 }
 
 /* Effet quand on passe la souris dessus (Hover) */
-#btn-ajout:hover {
+.btn-ajout:hover {
     background-color: #3e5c13;
     transform: translateY(-2px); /* Le bouton "monte" un peu */
     box-shadow: 0 6px 15px rgba(0, 0, 0, 0.4); /* L'ombre s'agrandit */
 }
 
 /* Effet quand on clique (Active) */
-#btn-ajout:active {
+.btn-ajout:active {
     transform: translateY(0px); /* Le bouton redescend */
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
 }
@@ -78,3 +78,49 @@ header {
     box-shadow: 0 0 0 0 rgba(46, 204, 113, 0);
 }
 }
+
+
+/* Bouton */
+
+#center-div {
+  position: absolute;
+  margin: auto;
+  width: 14px;
+  height: 14px;
+}
+
+.dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  position: relative;
+  cursor: pointer;
+  animation: dot-pulse 1.5s linear infinite;
+}
+
+.online {
+  background-color: rgba(0, 255, 0, 0.4);
+}
+
+.offline {
+  background-color: rgba(255, 0, 0, 0.4);
+}
+
+@keyframes dot-pulse {
+  0% {
+    transform: scale(1);
+    opacity: 0.75;
+  }
+  25% {
+    transform: scale(1);
+    opacity: 0.75;
+  }
+  100% {
+    transform: scale(2.5);
+    opacity: 0;
+  }
+}
+
+
+
+

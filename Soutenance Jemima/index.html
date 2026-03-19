@@ -16,8 +16,8 @@
 <section class="boutique">
     <div class="produit-carte">
         <h3>Grade VIP</h3>
-        <p>Prix : 15€</p>
-        <button id="btn-ajout" class="panier" data-nom="Grade VIP" data-prix="15">
+        <p id="prix">Prix : 15€</p>
+        <button id="btnAjoutVip" class="btn-ajout" data-nom="Grade VIP" data-prix="15">
             Ajouter au panier
         </button>
     </div>
@@ -25,7 +25,7 @@
     <div class="produit-carte">
         <h3>Kit Diamant</h3>
         <p>Prix : 5€</p>
-        <button id="btn-ajout" data-id="2" data-nom="Kit Diamant" data-prix="5">
+        <button id="btnAjoutKit" class="btn-ajout">
             Ajouter au panier
         </button>
     </div>
@@ -34,13 +34,17 @@
     <h2>Votre sélection :</h2>
     <ul id="liste-panier">
         </ul>
-    <p>Total : <span id="total-prix">0</span>€</p>
+        <div id="tots"><p>Total : <span id="total-prix">0</span>€</p></div>
+<div id="center-div">
+  <div class="dot online"></div>
+<span>Online</span>
+  <br>
+  <div class="dot offline"></div>
+<span>Offline</span>
 </section>
 
-<div class="status-container">
-        <span id="couleur" class="dot"></span>
-        <span id="player-count">Chargement...</span> joueurs en ligne
-
 <script src="script.js"></script>
+
+
 </body>
 </html>
