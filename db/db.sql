@@ -1,6 +1,6 @@
 -- create database cubic_infrastructure group;
 -- user_cubic__infrastructure group;
-
+-- drop table users, player, boutique_item ,purchase;
 create table users(
 id serial primary key ,
 username varchar(100)not null unique ,
@@ -10,7 +10,6 @@ role varchar(20) default 'player',
 created_at timestamp default current_timestamp 
 );
 
-
 CREATE TABLE player (
 id SERIAL PRIMARY KEY,
 username VARCHAR(100),
@@ -18,7 +17,6 @@ gamertag VARCHAR(50),
 email VARCHAR(100),
 is_admin BOOLEAN DEFAULT FALSE
 );
-
 
 create table boutique_item(
 id serial primary key ,
@@ -31,9 +29,9 @@ stock int
 
 CREATE TABLE purchase (
 id SERIAL PRIMARY KEY,
-user_id INT,
-item_id INT,
-constraint user_fk FOREIGN KEY (user_id) REFERENCES users(id),
+id_user INT not null,
+item_id INT not null,
+constraint user_fk FOREIGN KEY (id_user) REFERENCES users(id),
 constraint item_fk FOREIGN KEY (item_id) REFERENCES boutique_item(id)
 );
 INSERT INTO boutique_item (nom,prix,couleur,stock) VALUES
@@ -50,18 +48,26 @@ INSERT INTO player (username ,gamertag, email) VALUES
 ('ibou','GamerGirl', 'gamergirl@example.com'),
 ('dia','NoobMaster', 'noobmaster@example.com');
 
-INSERT INTO purchase (user_id,item_id) VALUES
-(1,1),
-(2,1),
-(1,2);
+
+insert into users (username,email,password,role) values 
+('aa','aa@aa.aa','aa','aa'),
+('bb','bb@bb.bb','bb','bb'),
+('cc','cc@cc.cc','cc','cc');
 
 
 
-select * from player ;
+INSERT INTO purchase (id_user, item_id) VALUES
+(1, 1),
+(2, 3),
+(3, 2);
 
-SELECT user_id, boutique_item.nom
+
+
+select * from users ;
+
+SELECT id_user, boutique_item.nom
 FROM purchase
-JOIN user ON purchase.user_id = user_id
+JOIN user ON purchase.id_user = id_user
 JOIN boutique_item ON purchase.item_id = boutique_item.id;
 
 
@@ -74,18 +80,18 @@ b.prix,
 p.id
 FROM boutique_item b
 full JOIN purchase p ON b.id = p.id
-full JOIN users u ON p.user_id = u.id;
+full JOIN users u ON p.id_user = u.id;
 
 
 
 
 SELECT 
-u.id AS user_id,
+u.id AS id_user,
 u.username,
 u.email,
 b.nom AS item_name,
 b.prix,
 p.id AS purchase_id
 FROM purchase p
-full JOIN player u ON p.user_id = u.id
-full JOIN boutique_item b ON p.item_id = b.id;
+full join boutique_item b on b.id = p.id
+full JOIN player u ON u.id = p.id_user ;
