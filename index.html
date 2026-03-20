@@ -1,120 +1,40 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CUBIC INFRASTRUCTURE</title>
+    <title>Serveur Minecraft</title>
+    <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-    <!-- barre de navigation -->
-        <header>
-        <nav>
-            <div class="logo">CUBIC <span>INFRA</span>
-            
-            <ul class="nav-liens">
-                <li><a href="http://www.instagram.com">ACTUALITES</a></li>
-                <li><a href="http://www.google.com" >BOUTIQUE</a></li>
-                <li><a href="http://www.google.com">CLASSEMENT</a></li>
-                <li><a href="http://www.google.com">STATUT</a></li>
-            </ul>
-            
-            <a href="https://www.google.com" class="btn-nav btn"><button>Connexion</button></a>
-            <a href="https://www.google.com" class="btn-nav btn"><button>inscription</button></a>
+
+    <header>
+        <div class="top-bar">
+            <h1>Serveur Minecraft</h1>
+
+            <div class="auth">
+                <a href="./login/login.html" class="btn">Connexion</a>
+                <a href="./inscription/inscription.html" class="btn">Inscription</a>
             </div>
-        </nav>
-        </header>
+        </div>
 
-        <h1>CUBIC INFRASTRUCTURE</h1>
-        <p>est une entreprise francaise, fondé en 1914 pour l'elaboration de jeux vidéo est les action humanitaire</p>
+        <p class="subtitle">Bienvenue sur notre serveur !</p>
+    </header>
 
-        <div class="container">
-            SERVICES
-        </div>
-        <div class="container">
-            ACTUALITE
-        </div>
-        <div class="container">
-            PRODUIT
-        </div>
+    <main>
         
+        <nav class="menu">
+        <a href="./classement/classement.html" class="btn">Classement</a>
+        <a href="status%20server/status.html" class="btn">Status serveur</a>
+        <a href="./panier/panier.html" class="btn">Panier</a>
+        <a href="./profil/profil.html" class="btn">Profil</a>
+        <a href="./Admin/Admin.html" class="btn">Admin</a>
+        <a href="./boutique/boutique.html" class="btn">Boutique</a>
+        </nav>
+    </main>
+
 </body>
-<main>
-    <!-- ACTUALITE EN TETE -->
-    <section>
-        <section id="ACTUALITE">
-        <div class="section container">
-            <p class="section-label">Actualite</p>
-            <h2 class="section-title">Dernière nouvelle</h2>
-            <p class="section">Mises à jour,evenements et annonces de l'equipe Cubic Infrastructure</p>
-        </div>
-        <!-- LES CONTAINER DANS ACTUALITE -->
-        <div class="new-grid">
-            <article class="news-card">
-                <div class="news-cards-thumb news thumbs update">
-                <span class="news-thumb-icon">⚙️</span>
-                </div>
-                <div class="news-card">
-                    <p class="new-card-lign">mise a jour</p>
-                    <h3 class="news-card-title">version 7.5-Nouveau systeme d'economie et marchands</h3>
-                    <p class="news-card-expect">renforce la capaicite du jeu a etre plus habille</p>
-                    <div class="news-card-footer">
-                        <span class="new-card-footer-first">Equipe gagnant</span>
-                        <span class="new-card-footer-second">18 janvier 2015</span>
-                        <span class="new-card-footer-third">18 min de lecture</span>
-                    </div>
-                </div>
 
-        <!-- les container des evenements -->
-        <div class="news-body-card">
-            <article class="news-body-card tag-event">
-                <div class="news-body-card">
-                <span class="news-body-card icon">🏆</span>
-                </div>
-                <div class="news-body-card">
-                    <p class="news-body-card tag-event">evenement</p>
-                    <h3 class="news-body-card event">Tournoi</h3>
-                    <p class="news-card-expect">Messures toi au grand de ce monde pour remporter le titre du meilleur du monde.</p>
-                    <div class="news-card-footer">
-                        <span class="new-event-footer-first">Equipe gagnant</span>
-                        <span class="new-event-footer-second">18 janvier 2015</span>
-                        <span class="new-event-footer-third">18 min de lecture</span>
-                    </div>
-                </div>
-            </article>
-    <div class="container">
-    <p>EVENEMENT</p>
-        <h3>Tournoi d'automne-Inscription gratuite</h3>
-        <p>Messures toi au grand de ce monde pour remporter le titre du meilleur au monde.</p>
-
-    </div>
-    </section>
-</main>
-
-<main>
-    <section id="CLASSEMENTS">
-        <div class="section container">
-            <p class="section-label">Classements</p>
-            <h2 class="section-title">TOP JOUEURS</h2>
-            <p class="section">Données synchroniser en temps reel</p>
-        </div>
-        <div class="tabs">
-            <button class="tabs active" onclick="switchTabs('playtime, time')">Temps de jeu</button>
-            <button class="tabs active" onclick="switchTabs('playtime, time')">Temps de jeu</button>
-            <button class="tabs active" onclick="switchTabs('playtime, time')">Temps de jeu</button>
-        </div>
-    
-    
-    
-    <div class="lb-card">
-        <div class="lb-head">
-        <span class="lb-head-title">Top temps de jeu</span>
-    </div>
-
-    <div class="lb-row">
-    <span class="lb-rank rank-1">1</span><div class="lb-avatar">TT</div>
-        <span class="lb-name">Theophane</span>
-        <span class="lb-value">780<span class="lb-unit">h</span></span>
-    </div>
-    </section>
-</main>
 </html>
