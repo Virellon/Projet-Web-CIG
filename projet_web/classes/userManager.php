@@ -17,7 +17,7 @@ if (isset($_POST['search'])) {
     $recherche = strtolower($_POST['search']);
 }
 
-if  (isset($_POST['pseudo']) && isset($_POST['age']) && , "role" => ""isset($_POST['email']) && isset ($_POST['password'])) {
+if  (isset($_POST['pseudo']) && isset($_POST['age']) && isset($_POST['email']) && isset ($_POST['password'])) {
     $pseudo = htmlspecialchars($_POST['pseudo']);
     $email = htmlspecialchars($_POST['email']);
     $password = htmlspecialchars($_POST['password']);

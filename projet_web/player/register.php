@@ -4,7 +4,7 @@ require "../databases/databases.php";
 require "../classes/user.php";
 require "../classes/userManager.php";
 
-$manager = new userManager($pdo);
+//$manager = new userManager($pdo);
 
 if(isset($_POST["submit"])){
 
@@ -13,9 +13,10 @@ if(isset($_POST["submit"])){
     $password = password_hash($_POST["password"], PASSWORD_DEFAULT);
     //$confirmPass = htmlspecialchars($_POST["confirmPass"])
     $role = "player";
-    $pseudo = new User(null, $pseudo, $email, $password, $role);
+    $pseudo = new User($pseudo, $email, $password, $role);
 
     $manager->create($pseudo);
 
     echo "Utilisateur ajouté";
 }
+?>
