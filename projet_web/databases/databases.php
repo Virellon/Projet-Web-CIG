@@ -1,15 +1,15 @@
 <?php
 
 $host = "localhost";
-$dbname = "postgres";
-$port = "5432";
-$pseudo = "postgres";
+$dbname = "cubicInfrastructure";
+$port = "3306";
+$pseudo = "root";
 $password = "";
 
 try {
 
   $pdo = new PDO(
-        "pgsql:host=$host;port=$port;dbname=$dbname",
+        "mysql:host=$host;port=$port;dbname=$dbname",
         $pseudo,
         $password
     );
